@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Leaf Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="glass-card">
+            <h1 class="page-title">Banana Leaf Disease Detection</h1>
+            <div class="camera-controls">
+                <button class="camera-btn" id="openCamera">
+                    <i class="fas fa-camera"></i> Open Camera
+                </button>
+                <video id="cameraFeed" hidden></video>
+                <canvas id="canvas" hidden></canvas>
+                <button class="capture-btn" id="captureBtn" hidden>
+                    <i class="fas fa-camera"></i> Capture
+                </button>
+                <button class="close-camera-btn" id="closeCamera" hidden>
+                    <i class="fas fa-times"></i> Close Camera
+                </button>
+            </div>
+            <div class="upload-area" id="dropZone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="upload-content">
+                    <i class="fa-solid fa-image"></i>
+                    <p>Drag & Drop or Click to Upload</p>
+                </div>
+                <div class="preview-container">
+                    <button class="preview-close-btn" id="closePreview" hidden>
+                    </button>
+                    <img id="preview" hidden>
+                </div>
+            </div>
+            <button class="analyze-btn" disabled>Analyze Image</button>
+            
+            <div class="result-section" hidden>
+                <div class="result-card">
+                    <h3>Detection Results</h3>
+                    <div class="result-content">
+                        <h4>Detected Disease:</h4>
+                        <p class="disease-name"></p>
+                        <h4>Confidence Score:</h4>
+                        <p class="confidence"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

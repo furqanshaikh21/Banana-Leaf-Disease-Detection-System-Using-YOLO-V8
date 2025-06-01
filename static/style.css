@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('BG.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.upload-area {
+    margin: 20px 0;
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.upload-content i {
+    font-size: 56px;
+    color: #444;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.upload-area:hover .upload-content i {
+    transform: scale(1.1);
+}
+
+.analyze-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.analyze-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.analyze-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.result-section {
+    margin-top: 20px;
+    animation: slideUp 0.5s ease-out;
+}
+
+.result-card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.result-content {
+    margin-top: 15px;
+}
+
+.result-content h4 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.disease-name {
+    font-size: 1.2em;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.confidence {
+    color: #34495e;
+}
+
+.camera-controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.camera-btn, .capture-btn, .close-camera-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.camera-btn:hover, .capture-btn:hover, .close-camera-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.camera-btn i, .capture-btn i, .close-camera-btn i {
+    margin-right: 8px;
+}
+
+#cameraFeed {
+    width: 100%;
+    max-width: 640px;
+    margin: 10px auto;
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+
+#cameraFeed[hidden], 
+#cameraFeed.closing {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
