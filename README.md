@@ -20,7 +20,7 @@ This project uses a YOLO-based deep learning model to detect and classify diseas
 ## 🔍 Findings
 
 <!-- Option 1: Inline image (hosted on GitHub or elsewhere) -->
-![Findings Example](https://github.com/yourusername/your-repo/raw/main/images/findings.png)
+![Findings Example](https://github.com/furqanshaikh21/Banana-Leaf-Disease-Detection-System-Using-YOLO-V8/blob/c6a6afe4ea91a68599244b10391ef8af1c2a84ae/Images/Screenshot%202025-06-01%20230114.png)
 
 <!-- Option 2: Local image in the repo (place your image in the images/ folder) -->
 <!-- ![Findings Example](images/findings.png) -->
